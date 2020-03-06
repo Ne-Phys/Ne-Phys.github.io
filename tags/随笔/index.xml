@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Luogu P1562 还是N皇后</title>
+      <link>https://cs-fil.github.io/2020/03/luogu-p1562/</link>
+      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/03/luogu-p1562/</guid>
+      <description>链接 摘要 $n$皇后问题 $0&amp;lt;n&amp;lt;=14$ 解 据数据范围 直接搜索会$tle$ 使用位运算可以达到优化的目的 mxstt 即为列放置最终状态 构造函数 dfs(cstt,l,r,ln) 递归边界 cstt==mxstt k=~(cstt|l|r|ln)&amp;amp;mxstt 以获取改行状态</description>
+    </item>
+    
+    <item>
       <title>Hello?</title>
       <link>https://cs-fil.github.io/2020/01/blog/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
