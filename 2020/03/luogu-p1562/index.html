@@ -43,7 +43,7 @@
 <meta itemprop="description" content="位运算&#43;搜索">
 <meta itemprop="datePublished" content="2020-03-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="241">
+<meta itemprop="wordCount" content="247">
 
 
 
@@ -152,7 +152,7 @@
     <h3 class="widget-title">公告</h3>
     <div class="widget-body">
         <div id="board">
-            <div class="content"><p>We gonna set on.</p>
+            <div class="content"><p>汹浪可斩 山河易安</p>
             </div>
         </div>
     </div>
@@ -216,6 +216,16 @@
         </ul>
     </div>
 </div>
+      <div class="links">
+    <h4 class="widget-title">友链</h4>
+    <div class="widget-body">
+        <div id="links">
+            <div class="content">
+                <a href="https://www.cnblogs.com/Tony-Double-Sky/">Tony</a>
+            </div>
+        </div>
+    </div>
+</div>
   </div>
 </aside>
 
@@ -234,13 +244,13 @@
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 itemprop="name">
+      <h3 itemprop="name">
   <a
     class="article-title"
     href="/2020/03/luogu-p1562/"
     >Luogu P1562 还是N皇后</a
   >
-</h1>
+</h3>
 
       <div class="article-meta">
         
@@ -262,8 +272,6 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/03/luogu-p1562/#comments"
             class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 241字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -295,41 +303,47 @@
 <li>尤其注意 <code>maxstate</code> 限制二进制位数</li>
 </ol>
 <h4 id="代码">代码</h4>
-<!-- raw HTML omitted -->
-<p>int n,ans,mxstt;
+<pre><code class="language-cpp">#include&lt;cstdio&gt;
+#include&lt;cstdlib&gt;
+#define ifor(i,a,b) for(int i=(a);i&lt;=(b);i++)
+
+int n,ans,mxstt;
 int stt[20];
-char s[15];</p>
-<p>inline int lowbit(int x)
+char s[15];
+
+inline int lowbit(int x)
 {
-return x&amp;-x;
-}</p>
-<p>inline void dfs(int cstt,int l,int r,int ln)
-{
-if(cstt==mxstt) {ans++; return;}
-int k=~(cstt|l|r|stt[ln])&amp;mxstt;
-while(lowbit(k))
-{
-dfs(cstt|lowbit(k),(l|lowbit(k))&raquo;1,(r|lowbit(k))&laquo;1,ln+1);
-k^=lowbit(k);
+    return x&amp;-x;
 }
-}</p>
-<p>int main()
+
+inline void dfs(int cstt,int l,int r,int ln)
 {
-scanf(&quot;%d&rdquo;,&amp;n);
-mxstt=(1&laquo;n)-1;
-ifor(i,1,n)
-{
-scanf(&quot;%s&rdquo;,s+1);
-ifor(j,1,n)
-if(s[j]==&rsquo;.')
-stt[i]|=(1&laquo;n-j);
+    if(cstt==mxstt) {ans++; return;}
+    int k=~(cstt|l|r|stt[ln])&amp;mxstt;
+    while(lowbit(k))
+    {
+        dfs(cstt|lowbit(k),(l|lowbit(k))&gt;&gt;1,(r|lowbit(k))&lt;&lt;1,ln+1);
+        k^=lowbit(k);
+    }
 }
-dfs(0,0,0,1);
-printf(&quot;%d&rdquo;,ans);
-system(&ldquo;pause&rdquo;);
-return 0;
-}</p>
-<pre><code></code></pre>
+
+int main()
+{
+    scanf(&quot;%d&quot;,&amp;n);
+    mxstt=(1&lt;&lt;n)-1;
+    ifor(i,1,n)
+    {
+        scanf(&quot;%s&quot;,s+1);
+        ifor(j,1,n)
+            if(s[j]=='.')
+                stt[i]|=(1&lt;&lt;n-j);
+    }
+    dfs(0,0,0,1);
+    printf(&quot;%d&quot;,ans);
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">
