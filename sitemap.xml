@@ -100,4 +100,10 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://cs-fil.github.io/links/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>
