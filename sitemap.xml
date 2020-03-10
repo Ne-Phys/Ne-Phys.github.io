@@ -80,7 +80,7 @@
   </url>
   
   <url>
-    <loc>https://cs-fil.github.io/categories/%E9%9A%8F/</loc>
+    <loc>https://cs-fil.github.io/categories/%E6%96%87/</loc>
     <lastmod>2020-01-30T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -95,7 +95,6 @@
   
   <url>
     <loc>https://cs-fil.github.io/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
