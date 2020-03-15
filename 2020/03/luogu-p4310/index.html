@@ -43,7 +43,7 @@
 <meta itemprop="description" content="位运算&#43;动态规划">
 <meta itemprop="datePublished" content="2020-03-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="301">
+<meta itemprop="wordCount" content="287">
 
 
 
@@ -169,7 +169,7 @@
     <div class="widget-body">
         <ul class="category-list">
             <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E6%96%87/" class="category-list-link">文</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E9%A2%98%E8%A7%A3/" class="category-list-link">题解</a><span class="category-list-count">3</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E9%A2%98%E8%A7%A3/" class="category-list-link">题解</a><span class="category-list-count">4</span></li>
         </ul>
     </div>
 </div>
@@ -180,7 +180,7 @@
             
             
             <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="tag-list-link">位运算</a><span
-                    class="tag-list-count">3</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="tag-list-link">动态规划</a><span
@@ -207,6 +207,16 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget-body">
         <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2020/03/luogu-p5640/" class="title">Luogu P5640 【CSGRound2】逐梦者的初心</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-03-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-14</time>
+                    </p>
+                </div>
+            </li>
             <li>
                 <div class="item-inner">
                     <p class="item-title">
@@ -301,11 +311,11 @@
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <h4 id="链接httpswwwluogucomcnproblemp4310"><a href="https://www.luogu.com.cn/problem/P4310">链接</a></h4>
 <h4 id="摘要">摘要</h4>
-<p>   给定一个长度为 $n$ 的数列 $a$<!-- raw HTML omitted -->$i$<!-- raw HTML omitted -->，求 $a$<!-- raw HTML omitted -->$i$<!-- raw HTML omitted --> 的子序列 $b$<!-- raw HTML omitted -->$i$<!-- raw HTML omitted --> 的最长长度 $k$，满足 $b$<!-- raw HTML omitted -->$i$<!-- raw HTML omitted -->&amp;$b$<!-- raw HTML omitted -->$i-1$<!-- raw HTML omitted -->$\neq$$0$，其中 $2$ $\leq$ $i$ $\leq$ $k$<br>
-   $1$ $\leq$ $n$ $\leq$ $100000$，$a$<!-- raw HTML omitted -->$i$<!-- raw HTML omitted --> $\leq$ $10^9$</p>
+<p>   给定一个长度为 $n$ 的数列 $a_i$，求 $a_i$ 的子序列 $b_i$ 的最长长度 $k$，满足 $b_i$$&amp;$$b[i-1]$$\neq$$0$，其中 $2$ $\leq$ $i$ $\leq$ $k$<br>
+   $1$ $\leq$ $n$ $\leq$ $100000$，$a_i$ $\leq$ $10^9$</p>
 <h4 id="解">解</h4>
 <p>   $f[i]$ 表示当前最后一项的第 $i$ 位为 $1$ 的最大子序列长度<br>
-   当 $a$&amp;$b$$\neq$$0$，即 $ab$ 有相同的一位为 $1$，根据此性质进行转移<br>
+   当 $a$$&amp;$$b$$\neq$$0$，即 $ab$ 有相同的一位为 $1$，根据此性质进行转移<br>
    在读入的过程中进行处理</p>
 <ul>
 <li>若该数第 $i$ 位为 $1$，由于所定义的 $dp$ 数组的性质，转移时即为<code>f[i]+1</code></li>
@@ -382,6 +392,11 @@ int main()
                 <a href="https://cs-fil.github.io/2020/03/luogu-p2114/" title="Luogu P2114 [NOI2014]起床困难综合症"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://cs-fil.github.io/2020/03/luogu-p5640/"
+                    title="Luogu P5640 【CSGRound2】逐梦者的初心"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
