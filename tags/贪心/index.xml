@@ -11,7 +11,25 @@
     
     
     <item>
-      <title>topsort</title>
+      <title>Luogu P4071 [SDOI]排列计数</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p4071/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p4071/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>欧拉定理&amp;费马小定理</title>
+      <link>https://cs-fil.github.io/2020/11/eulers-theoremfermats-little-theorem/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/eulers-theoremfermats-little-theorem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>拓扑排序</title>
       <link>https://cs-fil.github.io/2020/11/topsort/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
@@ -52,15 +70,6 @@
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cs-fil.github.io/2020/03/luogu-p1050/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P1050 循环</title>
-      <link>https://cs-fil.github.io/2020/03/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</link>
-      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/03/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/</guid>
       <description></description>
     </item>
     
