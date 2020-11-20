@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>欧拉定理 on Cirrostratus filosus</title>
+    <link>https://cs-fil.github.io/tags/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/</link>
+    <description>Recent content in 欧拉定理 on Cirrostratus filosus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://cs-fil.github.io/tags/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>友链</title>
+      <link>https://cs-fil.github.io/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/links/</guid>
+      <description>Tony</description>
+    </item>
+    
+  </channel>
+</rss>
