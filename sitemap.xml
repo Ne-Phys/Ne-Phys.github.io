@@ -4,14 +4,63 @@
   
   <url>
     <loc>https://cs-fil.github.io/categories/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://cs-fil.github.io/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/2020/11/poj-1064/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/posts/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/series/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/tags/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/series/themes-guide/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/tags/%E4%BA%8C%E5%88%86/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://cs-fil.github.io/categories/%E9%A2%98%E8%A7%A3/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,49 +73,7 @@
   </url>
   
   <url>
-    <loc>https://cs-fil.github.io/posts/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cs-fil.github.io/series/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cs-fil.github.io/tags/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cs-fil.github.io/series/themes-guide/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cs-fil.github.io/tags/%E4%BA%8C%E5%88%86/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://cs-fil.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</loc>
-    <lastmod>2020-11-21T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://cs-fil.github.io/categories/%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2020-11-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
