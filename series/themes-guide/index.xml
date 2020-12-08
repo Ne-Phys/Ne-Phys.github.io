@@ -5,10 +5,28 @@
     <link>https://cs-fil.github.io/series/themes-guide/</link>
     <description>Recent content in Themes Guide on Cirrostratus filosus</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://cs-fil.github.io/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Codeforces 670C Cinema</title>
+      <link>https://cs-fil.github.io/2020/12/cf-670c/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/cf-670c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>离散化</title>
+      <link>https://cs-fil.github.io/2020/12/discrete/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/discrete/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>POJ 1064 Cable master</title>
@@ -169,24 +187,6 @@
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cs-fil.github.io/2020/03/luogu-p4310/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P2114 [NOI2014]起床困难综合症</title>
-      <link>https://cs-fil.github.io/2020/03/luogu-p2114/</link>
-      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/03/luogu-p2114/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P1562 还是N皇后</title>
-      <link>https://cs-fil.github.io/2020/03/luogu-p1562/</link>
-      <pubDate>Fri, 06 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/03/luogu-p1562/</guid>
       <description></description>
     </item>
     
