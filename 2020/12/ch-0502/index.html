@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Codeforces 670C Cinema - Cirrostratus filosus
+        CH 0502 七夕祭 - Cirrostratus filosus
       </title>
     <head>
   <meta charset="utf-8">
@@ -23,33 +23,33 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <meta name="description" content="离散化" />
+  <meta name="description" content="数学" />
   <meta name="generator" content="Hugo 0.63.2 with theme pure" />
-  <title>Codeforces 670C Cinema - Cirrostratus filosus</title>
+  <title>CH 0502 七夕祭 - Cirrostratus filosus</title>
   
   
   <link rel="stylesheet" href="https://cs-fil.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
   
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-  <meta property="og:title" content="Codeforces 670C Cinema" />
-<meta property="og:description" content="离散化" />
+  <meta property="og:title" content="CH 0502 七夕祭" />
+<meta property="og:description" content="数学" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cs-fil.github.io/2020/12/cf-670c/" />
-<meta property="article:published_time" content="2020-12-08T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-12-08T00:00:00+00:00" />
+<meta property="og:url" content="https://cs-fil.github.io/2020/12/ch-0502/" />
+<meta property="article:published_time" content="2020-12-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-09T00:00:00+00:00" />
 
-<meta itemprop="name" content="Codeforces 670C Cinema">
-<meta itemprop="description" content="离散化">
-<meta itemprop="datePublished" content="2020-12-08T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-12-08T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="266">
+<meta itemprop="name" content="CH 0502 七夕祭">
+<meta itemprop="description" content="数学">
+<meta itemprop="datePublished" content="2020-12-09T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-12-09T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="470">
 
 
 
-<meta itemprop="keywords" content="离散化," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Codeforces 670C Cinema"/>
-<meta name="twitter:description" content="离散化"/>
+<meta itemprop="keywords" content="数学," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CH 0502 七夕祭"/>
+<meta name="twitter:description" content="数学"/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -338,8 +338,8 @@
       <h3 itemprop="name">
   <a
     class="article-title"
-    href="/2020/12/cf-670c/"
-    >Codeforces 670C Cinema</a
+    href="/2020/12/ch-0502/"
+    >CH 0502 七夕祭</a
   >
 </h3>
 
@@ -347,8 +347,8 @@
         
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://cs-fil.github.io/2020/12/cf-670c/" class="article-date">
-  <time datetime="2020-12-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-08</time>
+<a href="https://cs-fil.github.io/2020/12/ch-0502/" class="article-date">
+  <time datetime="2020-12-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-09</time>
 </a>
 </span>
 <span class="article-category">
@@ -357,129 +357,96 @@
 </span>  
   <span class="article-tag">
     <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/"> 离散化 </a>
+    <a class="article-tag-link" href="/tags/%E6%95%B0%E5%AD%A6/"> 数学 </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/12/cf-670c/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/12/ch-0502/#comments"
             class="article-comment-link">评论</a></span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <h4 id="链接httpscodeforcescomproblemsetproblem670c"><a href="https://codeforces.com/problemset/problem/670/C">链接</a></h4>
+      <h4 id="链接httpnoi-testzzstepcomcontest0x00e3808ce59fbae69cace7ae97e6b395e3808de4be8be9a298050220e4b883e5a495e7a5ad"><a href="http://noi-test.zzstep.com/contest/0x00%E3%80%8C%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E3%80%8D%E4%BE%8B%E9%A2%98/0502%20%E4%B8%83%E5%A4%95%E7%A5%AD">链接</a></h4>
 <h4 id="摘要">摘要</h4>
-<p>   $n$ 个人各自会一门语言, 语言用 $int$ 范围内的整数表示<br>
-   $m$ 部电影, 各自有配音和字幕<br>
-   求一部电影, 其配音的语言其次字幕的语言会的人最多</p>
+<p>   在 $n$$×$$m$ 的矩阵中, 有 $t$ 个关键点<br>
+   问是否可以通过上下左右移动关键点, 使得每行每列的关键点数相等 <br>
+   特别的, 第一列和第 $n$ 列相邻, 行亦然</p>
 <h4 id="解">解</h4>
-<p>   语言表示在 $int$ 范围内, 故需要离散化
-   一是用 $map$ 直接用作数组
-   二是手写离散化, 时空复杂度小</p>
+<p>   可以发现: 左右移动不会影响行关键点数, 上下不影响列<br>
+   于是拆分为两个部分: 左右移动使得列关键点数相等, 上下使行等<br>
+   于是问题变成了一维: 环形均分纸牌问题<br>
+   普通的均分纸牌问题, 先考虑第一个人索取或给予, 后将一二人视为一个整体考虑索取或给予<br>
+   若先预处理每一个人的手牌数减去均值, 则目标即是 $0$<br>
+   答案即是前缀和绝对值之和<br>
+   而考虑环形, 非环形的情况就是在第一个人和第 $n$ 个人之间断开 <br>
+   考虑朴素算法, 我们只需枚举断开的位置即可<br>
+   假设位置是 $k$, $a[k+1]$ 对应的前缀和即是 $s[k+1]-s[k]$<br>
+   多列几个关键点式子, 发现前缀和绝对值之和, 就是在之前的基础上, 每一项减去 $s[k]$<br>
+   该问题巧妙地指向了货仓选址问题, 即只需排序找到中位数便可得出答案</p>
+<h4 id="debug">debug</h4>
+<p>   $ceil$ 函数内外都是 <code>double</code><br>
+   答案要考虑是否 $long long$</p>
+<h4 id="技巧">技巧</h4>
+<p>   省 $ceil$ <code>k=(n+(n&amp;1))&gt;&gt;1</code><br>
+   最终求和还可以优化省去 $abs$</p>
+<pre><code class="language-cpp">    for(int i=1;i&lt;=n;++i)s1[i]+=s1[i-1];
+    rnum=s1[n]-s1[i]-(n-i)*(s1[i]-s1[i-1])+i*(s1[i]-s1[i-1])-s1[i];
+</code></pre>
 <h4 id="代码">代码</h4>
-<p>   $map$</p>
 <pre><code class="language-cpp">#include&lt;cstdio&gt;
-#include&lt;map&gt;
 #include&lt;cstdlib&gt;
+#include&lt;cmath&gt;
 #include&lt;algorithm&gt;
 #define ifor(i,a,b) for(int i=(a);i&lt;=(b);++i)
 
-const int N=2e5+5;
-int n,m;
-std::map&lt;int,int&gt; map;
-
-struct node
-{
-    int p,a,b;
-    inline bool operator&lt;(const node&amp;x)
-    const
-        {return (a&gt;x.a)||(a==x.a&amp;&amp;b&gt;x.b);}
-}mv[N];
+typedef long long ll;
+const int N=1e5+5;
+int n,m,t;
+ll a[N],b[N],aa[N],ba[N],as[N],bs[N];
+bool flg1=false,flg2=false;
 
 int main()
 {
-    scanf(&quot;%d&quot;,&amp;n);
-    int x;
-    ifor(i,1,n)
-        scanf(&quot;%d&quot;,&amp;x),map[x]++;
-    scanf(&quot;%d&quot;,&amp;m);
-    ifor(i,1,m)
+    scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;t);
+    int x,y;
+    ifor(i,1,t)
     {
-        scanf(&quot;%d&quot;,&amp;x);
-        mv[i].p=i;
-        if(map.count(x))
-            mv[i].a=map[x];
+        scanf(&quot;%d%d&quot;,&amp;x,&amp;y);
+        a[x]++,b[y]++;
     }
-    ifor(i,1,m)
+    ll a1=t/n,b1=t/m;
+    ll ans=0;
+    if(t%n==0)
     {
-        scanf(&quot;%d&quot;,&amp;x);
-        if(map.count(x))
-            mv[i].b=map[x];
+        ifor(i,1,n)
+            aa[i]=a[i]-a1,as[i]=as[i-1]+aa[i];
+        std::sort(as+1,as+n+1);
+        ll k=as[(int)ceil((double)n/2)];
+        ifor(i,1,n)
+            ans+=abs(as[i]-k);
+        flg1=true;
     }
-    std::sort(mv+1,mv+m+1);
-    printf(&quot;%d&quot;,mv[1].p);
-    //system(&quot;pause&quot;);
-    return 0;
+    if(t%m==0)
+    {
+        ifor(i,1,m)
+            ba[i]=b[i]-b1,bs[i]=bs[i-1]+ba[i];
+        std::sort(bs+1,bs+m+1);
+        ll k=bs[(int)ceil((double)m/2)];
+        ifor(i,1,m)
+            ans+=abs(bs[i]-k);
+        flg2=true;
+    }
+    if(flg1&amp;&amp;flg2)
+        printf(&quot;both %lld&quot;,ans);
+    else if(flg1)
+        printf(&quot;row %lld&quot;,ans);
+    else if(flg2)
+        printf(&quot;column %lld&quot;,ans);
+    else printf(&quot;impossible&quot;);
+    system(&quot;pause&quot;);
 }
 </code></pre>
-<p>   手写离散化</p>
-<pre><code class="language-cpp">#include&lt;cstdio&gt;
-#include&lt;cstdlib&gt;
-#include&lt;algorithm&gt;
-#define ifor(i,a,b) for(int i=(a);i&lt;=(b);++i)
-
-const int N=2e5+5;
-int n,m;
-int l[N],t[N],ttl[N],c;
-
-struct node
-{
-    int p,a,b;
-    inline bool operator&lt;(const node&amp;x)
-    const
-        {return (a&gt;x.a)||((a==x.a)&amp;&amp;(b&gt;x.b));}
-}mv[N];
-
-inline void discrete()
-{
-    std::sort(l+1,l+n+1);
-    ifor(i,1,n)
-    {
-        if(i==1||l[i]!=l[i-1])
-            t[++c]=l[i];//t数组用于查位置
-        ttl[c]++;
-    }
-}
-
-inline int query(int x)
-{
-    return std::lower_bound(t+1,t+c+1,x)-t;
-}
-
-int main()
-{
-    scanf(&quot;%d&quot;,&amp;n);
-    ifor(i,1,n)
-        scanf(&quot;%d&quot;,&amp;l[i]);
-    discrete();
-    scanf(&quot;%d&quot;,&amp;m);
-    int x;
-    ifor(i,1,m)
-    {
-        scanf(&quot;%d&quot;,&amp;x);
-        mv[i].p=i;
-        if(t[query(x)]==x)
-            mv[i].a=ttl[query(x)];
-    }
-    ifor(i,1,m)
-    {
-        scanf(&quot;%d&quot;,&amp;x);
-        if(t[query(x)]==x)
-            mv[i].b=ttl[query(x)];
-    }
-    std::sort(mv+1,mv+m+1);
-    printf(&quot;%d&quot;,mv[1].p);
-    //system(&quot;pause&quot;);
-    return 0;
-}
+<p>   省 $abs$</p>
+<pre><code class="language-cpp">
 </code></pre>
     </div>
     <div class="article-footer">
@@ -487,7 +454,7 @@ int main()
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接: </strong>
-      <a href="https://cs-fil.github.io/2020/12/cf-670c/" title="Codeforces 670C Cinema" target="_blank" rel="external">https://cs-fil.github.io/2020/12/cf-670c/</a>
+      <a href="https://cs-fil.github.io/2020/12/ch-0502/" title="CH 0502 七夕祭" target="_blank" rel="external">https://cs-fil.github.io/2020/12/ch-0502/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -519,14 +486,9 @@ int main()
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://cs-fil.github.io/2020/12/discrete/" title="离散化"><i
+                <a href="https://cs-fil.github.io/2020/12/cf-670c/" title="Codeforces 670C Cinema"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
-            </li>
-            <li class="next">
-                <a href="https://cs-fil.github.io/2020/12/ch-0502/"
-                    title="CH 0502 七夕祭"><span>上一篇&nbsp;&nbsp;</span><i
-                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
