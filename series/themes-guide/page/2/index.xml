@@ -5,10 +5,19 @@
     <link>https://cs-fil.github.io/series/themes-guide/</link>
     <description>Recent content in Themes Guide on Cirrostratus filosus</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://cs-fil.github.io/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Luogu P1050 循环</title>
+      <link>https://cs-fil.github.io/2020/03/luogu-p1050/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/03/luogu-p1050/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Luogu P5640 【CSGRound2】逐梦者的初心</title>
