@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hash on Cirrostratus filosus</title>
+    <link>https://cs-fil.github.io/tags/hash/</link>
+    <description>Recent content in Hash on Cirrostratus filosus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://cs-fil.github.io/tags/hash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hash</title>
+      <link>https://cs-fil.github.io/2020/12/hash/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/hash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 3349 Snowflake Snow Snowflakes</title>
+      <link>https://cs-fil.github.io/2020/12/poj-3349/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/poj-3349/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CH 1301 邻值查找</title>
+      <link>https://cs-fil.github.io/2020/12/ch-1301/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/ch-1301/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CH 0601 Genius ACM</title>
+      <link>https://cs-fil.github.io/2020/12/ch-0601/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/ch-0601/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CH 0502 七夕祭</title>
+      <link>https://cs-fil.github.io/2020/12/ch-0502/</link>
+      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/ch-0502/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Codeforces 670C Cinema</title>
+      <link>https://cs-fil.github.io/2020/12/cf-670c/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/cf-670c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>离散化</title>
+      <link>https://cs-fil.github.io/2020/12/discrete/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/12/discrete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 1064 Cable master</title>
+      <link>https://cs-fil.github.io/2020/11/poj-1064/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/poj-1064/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P1419 寻找段落</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p1419/</link>
+      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p1419/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P3258 [JLOI]松鼠的新家</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p3258/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p3258/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P1714 切蛋糕</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p1714/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p1714/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>最近公共祖先(LCA)</title>
+      <link>https://cs-fil.github.io/2020/11/least-common-ancestors/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/least-common-ancestors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P2671 求和</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p2671/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p2671/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P4609 [FJOI]建筑师</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p4609/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p4609/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P1397 [NOI2013]矩阵游戏</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p1397/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p1397/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P1962 斐波那契数列</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p1962/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p1962/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P4071 [SDOI]排列计数</title>
+      <link>https://cs-fil.github.io/2020/11/luogu-p4071/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/luogu-p4071/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>欧拉定理&amp;费马小定理</title>
+      <link>https://cs-fil.github.io/2020/11/eulers-theoremfermats-little-theorem/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/eulers-theoremfermats-little-theorem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>拓扑排序</title>
+      <link>https://cs-fil.github.io/2020/11/topsort/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/topsort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 1958 Strange Towers of Hanoi</title>
+      <link>https://cs-fil.github.io/2020/09/poj-1958/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/09/poj-1958/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
