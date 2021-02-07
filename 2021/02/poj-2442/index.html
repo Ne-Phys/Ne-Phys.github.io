@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        POJ 2442 Sequence - Cirrostratus filosus
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="二叉堆" />
+  <meta name="generator" content="Hugo 0.63.2 with theme pure" />
+  <title>POJ 2442 Sequence - Cirrostratus filosus</title>
+  
+  
+  <link rel="stylesheet" href="https://cs-fil.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+  
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+  <meta property="og:title" content="POJ 2442 Sequence" />
+<meta property="og:description" content="二叉堆" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cs-fil.github.io/2021/02/poj-2442/" />
+<meta property="article:published_time" content="2021-02-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-02-06T00:00:00+00:00" />
+
+<meta itemprop="name" content="POJ 2442 Sequence">
+<meta itemprop="description" content="二叉堆">
+<meta itemprop="datePublished" content="2021-02-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="414">
+
+
+
+<meta itemprop="keywords" content="二叉堆," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="POJ 2442 Sequence"/>
+<meta name="twitter:description" content="二叉堆"/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+
+  
+  
+
+  <body class="main-center theme-white" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/cs-fil" target="_blank">
+            <img class="img-circle img-rotate" src="https://cs-fil.github.io/nasi.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">湮佚</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">loving Cloud&#34;</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>杭州，中国</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">主页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">归档</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-profile"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-links">
+                <a href="/links/">
+                    <i class="icon icon-link"></i>
+                  <span class="menu-title">友链</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>汹浪可斩 山河易安</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/thoughts/" class="category-list-link">thoughts</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E6%96%87/" class="category-list-link">文</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/" class="category-list-link">知识点</a><span class="category-list-count">6</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E9%A2%98%E8%A7%A3/" class="category-list-link">题解</a><span class="category-list-count">34</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/hash/" class="tag-list-link">hash</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/huffman/" class="tag-list-link">huffman</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/kmp/" class="tag-list-link">kmp</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/lca/" class="tag-list-link">lca</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/manacher/" class="tag-list-link">manacher</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/stl/" class="tag-list-link">stl</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/thoughts/" class="tag-list-link">thoughts</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BA%8C%E5%88%86/" class="tag-list-link">二分</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BA%8C%E5%8F%89%E5%A0%86/" class="tag-list-link">二叉堆</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="tag-list-link">优先队列</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="tag-list-link">位运算</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%80%8D%E5%A2%9E/" class="tag-list-link">倍增</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="tag-list-link">动态规划</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/" class="tag-list-link">单调队列</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="tag-list-link">字符串</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/" class="tag-list-link">字符串hash</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%B7%AE%E5%88%86/" class="tag-list-link">差分</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="tag-list-link">拓扑排序</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%8E%92%E5%BA%8F/" class="tag-list-link">排序</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%90%9C%E7%B4%A2/" class="tag-list-link">搜索</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%95%B0%E5%AD%A6/" class="tag-list-link">数学</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%9E%9A%E4%B8%BE/" class="tag-list-link">枚举</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%A0%88/" class="tag-list-link">栈</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%A8%A1%E6%8B%9F/" class="tag-list-link">模拟</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/" class="tag-list-link">欧拉定理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" class="tag-list-link">矩阵乘法</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" class="tag-list-link">离散化</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E7%BA%BF%E6%80%A7%E9%80%92%E6%8E%A8/" class="tag-list-link">线性递推</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E8%B4%AA%E5%BF%83/" class="tag-list-link">贪心</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" class="tag-list-link">费马小定理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E9%80%92%E6%8E%A8/" class="tag-list-link">递推</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E9%93%BE%E8%A1%A8/" class="tag-list-link">链表</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E9%9A%8F%E7%AC%94/" class="tag-list-link">随笔</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2021/02/luogu-p5763/" class="title">Luogu P5763 内存分配</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-07</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2021/02/poj-1964/" class="title">POJ 1964 City Game</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-07</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2021/02/ch-1801/" class="title">CH 1801 括号画家</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-06</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2021/02/ch-1802/" class="title">CH 1802 表达式计算4</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-06</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2021/02/luogu-p2168/" class="title">Luogu P2168 荷马史诗</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-02-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-06</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h3 itemprop="name">
+  <a
+    class="article-title"
+    href="/2021/02/poj-2442/"
+    >POJ 2442 Sequence</a
+  >
+</h3>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://cs-fil.github.io/2021/02/poj-2442/" class="article-date">
+  <time datetime="2021-02-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-02-06</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E9%A2%98%E8%A7%A3/"> 题解 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E4%BA%8C%E5%8F%89%E5%A0%86/"> 二叉堆 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2021/02/poj-2442/#comments"
+            class="article-comment-link">评论</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h4 id="链接httppojorgproblemid2442"><a href="http://poj.org/problem?id=2442">链接</a></h4>
+<h4 id="摘要">摘要</h4>
+<p>   给定 $m$ 个长度为 $n$ 的序列, 从每个序列中各取一个数得到 $n^m$ 种序列<br>
+   求其中前 $n$ 小的序列和</p>
+<h4 id="解">解</h4>
+<p>   先从两个序列开始思考(对于很多题目, 从小情况着手后递推是很重要的思路)<br>
+   先对两个序列进行排序, 显然最小的即为 $a[1]+b[1]$<br>
+   次小的即可能为 $a[1+1]+b[1]$ 或 $a[1]+b[1+1]$<br>
+   那么我们可建一个小根堆, 先将 (1,1) 插入, 取出后插入以上两种情况<br>
+   但是如此会有重复的插入<br>
+   为了保证每一个数对只至多进一次: 对于每一个 $a[1]$ 对应插入 $b[1~n]$<br>
+   插入三元组 $(i,j,last)$<br>
+   当右指针移动时, 即锁定 $a[i]$, 不可移动 $i$, 只可移动 $j$, 对应插入 $b[1~n]$: 设置 $last$ 为 <code>true</code>, 之后每次判定先检查 $last$, 若真不动左指针<br>
+   为了兼顾 $a[1~n]$, 左指针移动时即可枚举 $b[1~n]$, 也可移步下一个 $a[i]$<br>
+   如此便可以不重不漏<br>
+   原问题即相当于做 $m-1$ 次该操作</p>
+<h4 id="debug">debug</h4>
+<p>   重置 $cnt$ 要放在每一次匹配新序列之前, 而非多组数据前</p>
+<h4 id="代码">代码</h4>
+<pre><code class="language-cpp">#include&lt;cstdio&gt;
+#include&lt;cstdlib&gt;
+#include&lt;algorithm&gt;
+#define ifor(i,a,b) for(int i=(a);i&lt;=(b);++i)
+
+const int N=2e3+5;
+int T,n,m,a[N],b[N],c[N];
+int cnt;
+
+struct node
+{
+    int i,j;
+    bool last;
+    inline bool operator&lt;(const node&amp;x)
+    const
+        {return a[i]+b[j]&lt;a[x.i]+b[x.j];}
+}heap[N*2];
+
+inline void up(int x)
+{
+    while(x!=1)
+    {
+        if(heap[x]&lt;heap[x/2])
+            std::swap(heap[x],heap[x/2]),
+            x/=2;
+        else break;
+    }
+}
+
+inline void down(int x)
+{
+    int s=x*2;
+    while(s&lt;=cnt)
+    {
+        if(s&lt;cnt&amp;&amp;heap[s+1]&lt;heap[s]) ++s;
+        if(heap[s]&lt;heap[x])
+            std::swap(heap[s],heap[x]),
+            x=s,s=x*2;
+        else break;
+    }
+}
+
+int main()
+{
+    scanf(&quot;%d&quot;,&amp;T);
+    while(T--)
+    {
+        scanf(&quot;%d%d&quot;,&amp;m,&amp;n);
+        ifor(i,1,n)
+            scanf(&quot;%d&quot;,&amp;a[i]);
+        std::sort(a+1,a+n+1);
+        ifor(i,2,m)
+        {
+            cnt=0;
+            ifor(j,1,n) 
+                scanf(&quot;%d&quot;,&amp;b[j]);
+            std::sort(b+1,b+n+1);
+            node t;
+            t.i=1,t.j=1,t.last=false;
+            heap[++cnt]=t,up(cnt);
+            ifor(j,1,n)
+            {
+                node p=heap[1];
+                heap[1]=heap[cnt--],down(1);
+                c[j]=a[p.i]+b[p.j];
+                node e1;
+                e1.i=p.i,e1.j=p.j+1,e1.last=true;
+                heap[++cnt]=e1,up(cnt);
+                if(!p.last)
+                {
+                    node e2;
+                    e2.i=p.i+1,e2.j=p.j,e2.last=false;
+                    heap[++cnt]=e2,up(cnt);
+                }
+            }
+            ifor(j,1,n)
+                a[j]=c[j];
+        }
+        ifor(i,1,n)
+            printf(&quot;%d &quot;,a[i]);
+        puts(&quot;&quot;);
+    }
+    system(&quot;pause&quot;);
+    return 0;
+}
+</code></pre>
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://cs-fil.github.io/2021/02/poj-2442/" title="POJ 2442 Sequence" target="_blank" rel="external">https://cs-fil.github.io/2021/02/poj-2442/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cs-fil" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://cs-fil.github.io/nasi.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cs-fil" target="_blank"><span class="text-dark">湮佚</span><small class="ml-1x">loving Cloud&#34;</small></a></h3>
+        <div>i just want you here with me</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://cs-fil.github.io/2021/02/poj-1456/" title="POJ 1456 Supermarket"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://cs-fil.github.io/2021/02/luogu-p6033/"
+                    title="Luogu P6033 合并果子 加强版"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/cs-fil" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://cs-fil.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2021
+    <div class="publishby">
+        Theme base on hugo.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://cs-fil.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://cs-fil.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/cs-fil.github.io\/',
+            CONTENT_URL: 'https:\/\/cs-fil.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://cs-fil.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

@@ -5,10 +5,118 @@
     <link>https://cs-fil.github.io/</link>
     <description>Recent content on Cirrostratus filosus</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://cs-fil.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Luogu P5763 内存分配</title>
+      <link>https://cs-fil.github.io/2021/02/luogu-p5763/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/luogu-p5763/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 1964 City Game</title>
+      <link>https://cs-fil.github.io/2021/02/poj-1964/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/poj-1964/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CH 1801 括号画家</title>
+      <link>https://cs-fil.github.io/2021/02/ch-1801/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/ch-1801/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CH 1802 表达式计算4</title>
+      <link>https://cs-fil.github.io/2021/02/ch-1802/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/ch-1802/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P2168 荷马史诗</title>
+      <link>https://cs-fil.github.io/2021/02/luogu-p2168/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/luogu-p2168/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P3620 [APIO/CTSC 2007]数据备份</title>
+      <link>https://cs-fil.github.io/2021/02/luogu-p3620/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/luogu-p3620/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Luogu P6033 合并果子 加强版</title>
+      <link>https://cs-fil.github.io/2021/02/luogu-p6033/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/luogu-p6033/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 2442 Sequence</title>
+      <link>https://cs-fil.github.io/2021/02/poj-2442/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/poj-2442/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 1456 Supermarket</title>
+      <link>https://cs-fil.github.io/2021/02/poj-1456/</link>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/02/poj-1456/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>P1368 【模板】 最小表示法</title>
+      <link>https://cs-fil.github.io/2021/01/luogu-p1368/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/01/luogu-p1368/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KMP</title>
+      <link>https://cs-fil.github.io/2021/01/kmp/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/01/kmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>POJ 1961 Period</title>
+      <link>https://cs-fil.github.io/2021/01/poj-1961/</link>
+      <pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2021/01/poj-1961/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>有思</title>
@@ -25,15 +133,6 @@
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cs-fil.github.io/2020/12/poj-3974/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>txt</title>
-      <link>https://cs-fil.github.io/2020/12/txt/</link>
-      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/12/txt/</guid>
       <description></description>
     </item>
     
@@ -88,105 +187,6 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://cs-fil.github.io/2020/12/cf-670c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>离散化</title>
-      <link>https://cs-fil.github.io/2020/12/discrete/</link>
-      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/12/discrete/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>POJ 1064 Cable master</title>
-      <link>https://cs-fil.github.io/2020/11/poj-1064/</link>
-      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/poj-1064/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P1419 寻找段落</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p1419/</link>
-      <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p1419/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P3258 [JLOI]松鼠的新家</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p3258/</link>
-      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p3258/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P1714 切蛋糕</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p1714/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p1714/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>最近公共祖先(LCA)</title>
-      <link>https://cs-fil.github.io/2020/11/least-common-ancestors/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/least-common-ancestors/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P2671 求和</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p2671/</link>
-      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p2671/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P4609 [FJOI]建筑师</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p4609/</link>
-      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p4609/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P1397 [NOI2013]矩阵游戏</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p1397/</link>
-      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p1397/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P1962 斐波那契数列</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p1962/</link>
-      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p1962/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Luogu P4071 [SDOI]排列计数</title>
-      <link>https://cs-fil.github.io/2020/11/luogu-p4071/</link>
-      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://cs-fil.github.io/2020/11/luogu-p4071/</guid>
       <description></description>
     </item>
     
