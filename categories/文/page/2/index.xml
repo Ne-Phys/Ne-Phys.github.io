@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>欧拉定理&amp;费马小定理</title>
+      <link>https://cs-fil.github.io/2020/11/eulers-theoremfermats-little-theorem/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/eulers-theoremfermats-little-theorem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>拓扑排序</title>
+      <link>https://cs-fil.github.io/2020/11/topsort/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://cs-fil.github.io/2020/11/topsort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>POJ 1958 Strange Towers of Hanoi</title>
       <link>https://cs-fil.github.io/2020/09/poj-1958/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>

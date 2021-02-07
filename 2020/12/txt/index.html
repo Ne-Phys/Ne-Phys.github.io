@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        txt - Cirrostratus filosus
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="字符串Hash or manacher" />
+  <meta name="generator" content="Hugo 0.63.2 with theme pure" />
+  <title>txt - Cirrostratus filosus</title>
+  
+  
+  <link rel="stylesheet" href="https://cs-fil.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+  
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+  <meta property="og:title" content="txt" />
+<meta property="og:description" content="字符串Hash or manacher" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cs-fil.github.io/2020/12/txt/" />
+<meta property="article:published_time" content="2020-12-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-22T00:00:00+00:00" />
+
+<meta itemprop="name" content="txt">
+<meta itemprop="description" content="字符串Hash or manacher">
+<meta itemprop="datePublished" content="2020-12-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-12-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="10092">
+
+
+
+<meta itemprop="keywords" content="字符串Hash,manacher," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="txt"/>
+<meta name="twitter:description" content="字符串Hash or manacher"/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+
+  
+  
+
+  <body class="main-center theme-white" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/cs-fil" target="_blank">
+            <img class="img-circle img-rotate" src="https://cs-fil.github.io/nasi.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">湮佚</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">loving Cloud&#34;</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>杭州，中国</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">主页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">归档</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-profile"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-links">
+                <a href="/links/">
+                    <i class="icon icon-link"></i>
+                  <span class="menu-title">友链</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>汹浪可斩 山河易安</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/thoughts/" class="category-list-link">thoughts</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E6%96%87/" class="category-list-link">文</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/" class="category-list-link">知识点</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://cs-fil.github.io/categories/%E9%A2%98%E8%A7%A3/" class="category-list-link">题解</a><span class="category-list-count">24</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/hash/" class="tag-list-link">hash</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/lca/" class="tag-list-link">lca</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/manacher/" class="tag-list-link">manacher</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/thoughts/" class="tag-list-link">thoughts</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BA%8C%E5%88%86/" class="tag-list-link">二分</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" class="tag-list-link">位运算</a><span
+                    class="tag-list-count">5</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%80%8D%E5%A2%9E/" class="tag-list-link">倍增</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="tag-list-link">动态规划</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/" class="tag-list-link">单调队列</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/" class="tag-list-link">字符串hash</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E5%B7%AE%E5%88%86/" class="tag-list-link">差分</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" class="tag-list-link">拓扑排序</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%90%9C%E7%B4%A2/" class="tag-list-link">搜索</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%95%B0%E5%AD%A6/" class="tag-list-link">数学</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%9E%9A%E4%B8%BE/" class="tag-list-link">枚举</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%A8%A1%E6%8B%9F/" class="tag-list-link">模拟</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/" class="tag-list-link">欧拉定理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/" class="tag-list-link">矩阵乘法</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" class="tag-list-link">离散化</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E7%BA%BF%E6%80%A7%E9%80%92%E6%8E%A8/" class="tag-list-link">线性递推</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E8%B4%AA%E5%BF%83/" class="tag-list-link">贪心</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" class="tag-list-link">费马小定理</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E9%80%92%E6%8E%A8/" class="tag-list-link">递推</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E9%93%BE%E8%A1%A8/" class="tag-list-link">链表</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://cs-fil.github.io/tags/%E9%9A%8F%E7%AC%94/" class="tag-list-link">随笔</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2021/01/%E6%9C%89%E6%80%9D/" class="title">有思</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-01-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2021-01-20</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2020/12/poj-3974/" class="title">POJ 3974 Palindrome</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-12-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-22</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2020/12/txt/" class="title">txt</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-12-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-22</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2020/12/hash/" class="title">Hash</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-12-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-21</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://cs-fil.github.io/2020/12/poj-3349/" class="title">POJ 3349 Snowflake Snow Snowflakes</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-12-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-21</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h3 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/12/txt/"
+    >txt</a
+  >
+</h3>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://cs-fil.github.io/2020/12/txt/" class="article-date">
+  <time datetime="2020-12-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-12-22</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E9%A2%98%E8%A7%A3/"> 题解 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2hash/"> 字符串Hash </a>
+    <a class="article-tag-link" href="/tags/manacher/"> manacher </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/12/txt/#comments"
+            class="article-comment-link">评论</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>Linear Work Suffix Array Construction
+Juha K¨arkk¨ainen∗ Peter Sanders† Stefan Burkhardt‡
+Abstract
+Suffix trees and suffix arrays are widely used and largely interchangeable
+index structures on strings and sequences. Practitioners prefer suffix arrays
+due to their simplicity and space efficiency while theoreticians use suffix trees
+due to linear-time construction algorithms and more explicit structure. We
+narrow this gap between theory and practice with a simple linear-time construction algorithm for suffix arrays. The simplicity is demonstrated with a
+C++ implementation of 50 effective lines of code. The algorithm is called
+DC3, which stems from the central underlying concept of difference cover.
+This view leads to a generalized algorithm, DC, that allows a space-efficient
+implementation and, moreover, supports the choice of a space–time tradeoff.
+For any v ∈ [1,
+√
+n], it runs in O(vn) time using O(n/√
+v) space in addition
+to the input string and the suffix array. We also present variants of the algorithm for several parallel and hierarchical memory models of computation.
+The algorithms for BSP and EREW-PRAM models are asymptotically faster
+than all previous suffix tree or array construction algorithms.
+1 Introduction
+The suffix tree [60] of a string is the compact trie of all its suffixes. It is a powerful
+data structure with numerous applications in computational biology [28] and elsewhere [26]. It can be constructed in linear time in the length of the string [16, 19, 48,
+57, 60]. The suffix array [24, 45] is the lexicographically sorted array of the suffixes
+of a string. It contains much the same information as the suffix tree, although in
+a more implicit form, but is a simpler and more compact data structure for many
+applications [2, 7, 24, 45]. However, until recently, the only linear-time construction
+algorithm was based on a lexicographic traversal of the suffix tree.
+∗Department of Computer Science, P.O.Box 68 (Gustaf H¨allstr¨omin katu 2b) FI-00014 University of Helsinki, Finland, <a href="mailto:juha.karkkainen@cs.helsinki.fi">juha.karkkainen@cs.helsinki.fi</a>. Supported by the Academy of
+Finland grant 201560.
+†Universit¨at Karlsruhe, 76128 Karlsruhe, Germany, <a href="mailto:sanders@ira.uka.de">sanders@ira.uka.de</a>.
+‡Google Inc, 1600 Amphitheatre Parkway, 94043 Mountain View, CA, USA, Burkhardt@
+Google.com.
+1
+Due to a more explicit structure and the direct linear-time construction algorithms, theoreticians tend to prefer suffix trees over suffix arrays. This is evident,
+for example, in text books, including recent ones [13, 56]. Practitioners, on the other
+hand, often use suffix arrays, because they are more space-efficient and simpler to
+implement. This difference of theoretical and practical approaches appears even
+within a single paper [50].
+We address the gap between theory and practice by describing the first direct
+linear-time suffix array construction algorithm, elevating suffix arrays to equals of
+suffix trees in this sense. Independently and simultaneously to our result, which
+originally appeared in [36], two different linear-time algorithms were introduced by
+Kim et al. [40], and Ko and Aluru [41]. In this paper, we will also introduce several
+extensions and generalizations of the algorithm, including space-efficient, parallel
+and external memory variants.
+Linear-time algorithm. Many linear-time suffix tree construction algorithms are
+truly linear-time only for constant alphabet, i.e, when the size of the alphabet is
+constant [48, 57, 60]. Farach [16] introduced the first algorithm to overcome this
+restriction; it works in linear-time for integer alphabet, i.e., when the characters are
+integers from a linear-sized range. This is a significant improvement, since a string
+over any alphabet can be transformed into such a string by sorting the characters
+and replacing them with their ranks. This preserves the structure of the suffix tree
+and the order of the suffixes. Consequently, the complexity of constructing the
+suffix tree of a string is the same as the complexity of sorting the characters of the
+string [19].
+Whereas the algorithms requiring a constant alphabet are incremental, adding
+one suffix or one character at a time to the tree, Farach’s algorithm takes the following half-recursive divide-and-conquer approach:</p>
+<ol>
+<li>Construct the suffix tree of the suffixes starting at odd positions. This is done
+by reduction to the suffix tree construction of a string of half the length, which
+is solved recursively.</li>
+<li>Construct the suffix tree of the remaining suffixes using the result of the first
+step.</li>
+<li>Merge the two suffix trees into one.
+The crux of the algorithm is the merging step, which is an intricate and complicated
+procedure.
+The same structure appears in some parallel and external memory suffix tree
+construction algorithms [17, 18, 19] as well as the direct linear-time suffix array
+construction algorithm of Kim et al. [40]. In all cases, the merge is a very complicated
+procedure. The linear-time suffix array construction algorithm of Ko and Aluru [41]
+2
+also uses the divide-and-conquer approach of first sorting a subset or sample of
+suffixes by recursion. However, its choice of the sample and the rest of the algorithm
+are quite different.
+We introduce a linear-time suffix array construction algorithm following the
+structure of Farach’s algorithm but using 2/3-recursion instead of half-recursion:</li>
+<li>Construct the suffix array of the suffixes starting at positions i mod 3 6= 0.
+This is done by reduction to the suffix array construction of a string of two
+thirds the length, which is solved recursively.</li>
+<li>Construct the suffix array of the remaining suffixes using the result of the first
+step.</li>
+<li>Merge the two suffix arrays into one.
+Surprisingly, the use of two thirds instead of half of the suffixes in the first step makes
+the last step almost trivial: simple comparison-based merging is sufficient. For
+example, to compare suffixes starting at i and j with i mod 3 = 0 and j mod 3 = 1,
+we first compare the initial characters, and if they are the same, we compare the
+suffixes starting at i + 1 and j + 1, whose relative order is already known from the
+first step.
+Space-efficient algorithms. All the above suffix array construction algorithms
+require at least n pointers or integers of extra space in addition to the n characters of
+the input and the n pointers/integers of the suffix array. Until recently, this was true
+for all algorithms running in O(n log n) time. There are also so-called lightweight
+algorithms that use significantly less extra space [47, 4], but their worst-case time
+complexity is Ω(n
+2
+). Manzini and Ferragina [47] have raised the question of whether
+it is possible to achieve O(n log n) runtime using sublinear extra space.
+The question was answered positively by Burkhardt and K¨arkk¨ainen [6] with an
+algorithm running in O(n log n) time and O(n/√
+log n) extra space. They also gave
+a generalization running in O(n log n + nv) time and O(n/√
+v) extra space for any
+v ∈ [3, n]. In this paper, combining ideas from [6] with the linear-time algorithm, we
+improve the result to O(nv) time in O(n/√
+v) extra space, leading to an o(n log n)
+time and o(n) extra space algorithm.
+To achieve the result, we generalize the linear-time algorithm so that the sample
+of suffixes sorted in the first step can be chosen from a family, called the difference
+cover samples, that includes arbitrarily sparse samples. This family was introduced
+in [6] and its name comes from a characterization using the concept of difference
+cover. Difference covers have also been used for VLSI design [39], distributed mutual
+exclusion [44, 10], and quantum computing [5].
+An even more space-efficient approach is to construct compressed indexes [21, 27,
+42, 31, 32]. However, for constant v our algorithm is a factor of at least Θ(log log σ)
+faster than these algorithms, where σ is the alphabet size.
+3
+Table 1: Suffix array construction algorithms. The algorithms in [16, 17, 18, 19] are
+indirect, i.e., they actually construct a suffix tree, which can be then be transformed
+into a suffix array
+model of computation complexity alphabet source
+RAM O(n log n) time general [45, 43, 6]
+O(n) time integer
+[16, 40,
+41],DC
+External Memory [59]
+D disks, block size B,
+fast memory of size M
+O(
+n
+DB
+log M
+B
+n
+B
+log n) I/Os
+O(n log M
+B
+n
+B
+log n) internal work integer [12]
+O(
+n
+DB
+log M
+B
+n
+B
+) I/Os
+O(n log M
+B
+n
+B
+) internal work integer [19],DC
+Cache Oblivious [22]
+M/B cache blocks of size B
+O(
+n
+B
+log M
+B
+n
+B
+log n) cache faults general [12]
+O(
+n
+B
+log M
+B
+n
+B
+) cache faults general [19],DC
+BSP [58]
+P processors
+h-relation in time L + gh
+O(
+n log n
+P + (L +
+gn
+P
+)
+log3 n log P
+log(n/P)
+)
+time general [17]
+O(
+n log n
+P + L log2 P +
+gn log n
+P log(n/P)
+)
+time general DC
+P = O(n
+1−
+) processors O(n/P + L log2 P + gn/P) time integer DC
+EREW-PRAM [33] O(log4 n) time, O(n log n) work general [17]
+O(log2
+n) time, O(n log n) work general DC
+arbitrary-CRCW-PRAM [33]O(log n) time, O(n) work (rand.) constant [18]
+priority-CRCW-PRAM [33]
+O(log2 n) time, O(n) work
+(rand.) constant DC
+Advanced models of computation. Since our algorithm is constructed from
+well studied building blocks like integer sorting and merging, simple direct suffix
+array construction algorithms for several models of computation are almost a corollary. Table 1 summarizes these results. We win a factor Θ(log n) over the previously
+best direct external memory algorithm. For BSP and EREW-PRAM models, we
+obtain an improvement over all previous results, including the first linear work BSP
+algorithm.
+4
+Overview. The paper is organized as follows. Section 3 explains the basic linear
+time algorithm DC3. We then use the concept of a difference cover introduced in
+Section 4 to describe a generalized algorithm called DC in Section 5 that leads to
+a space efficient algorithm in Section 6. Section 7 explains implementations of the
+DC3 algorithm in advanced models of computation. The results together with some
+open issues are discussed in Section 8.
+2 Notation
+We use the shorthands [i, j] = {i, . . . , j} and [i, j) = [i, j − 1] for ranges of integers
+and extend to substrings as seen below.
+The input of a suffix array construction algorithm is a string T = T[0, n) =
+t0t1 · · ·tn−1 over the alphabet [1, n], that is, a sequence of n integers from the range
+[1, n]. For convenience, we assume that tj = 0 for j ≥ n. Sometimes we also assume
+that n + 1 is a multiple of some constant v or a square to avoid a proliferation
+of trivial case distinctions and d·e operations. An implementation will either spell
+out the case distinctions or pad (sub)problems with an appropriate number of zero
+characters. The restriction to the alphabet [1, n] is not a serious one. For a string T
+over any alphabet, we can first sort the characters of T, remove duplicates, assign
+a rank to each character, and construct a new string T
+0 over the alphabet [1, n]
+by renaming the characters of T with their ranks. Since the renaming is order
+preserving, the order of the suffixes does not change.
+For i ∈ [0, n], let Si denote the suffix T[i, n) = titi+1 · · ·tn−1. We also extend
+the notation to sets: for C ⊆ [0, n], SC = {Si
+| i ∈ C}. The goal is to sort the
+set S[0,n] of suffixes of T, where comparison of substrings or tuples assumes the
+lexicographic order throughout this paper. The output is the suffix array SA[0, n]
+of T, a permutation of [0, n] satisfying SSA[0] &lt; SSA[1] &lt; · · · &lt; SSA[n]
+.
+3 Linear-time algorithm
+We begin with a detailed description of the simple linear-time algorithm, which we
+call DC3 (for Difference Cover modulo 3, see Section 4). A complete implementation
+in C++ is given in Appendix A. The execution of the algorithm is illustrated with
+the following example
+0 1 2 3 4 5 6 7 8 9 10 11
+T[0, n) = y a b b a d a b b a d o
+where we are looking for the suffix array
+SA = (12, 1, 6, 4, 9, 3, 8, 2, 7, 5, 10, 11, 0) .
+5
+Step 0: Construct a sample. For k = 0, 1, 2, define
+Bk = {i ∈ [0, n] | i mod 3 = k}.
+Let C = B1 ∪ B2 be the set of sample positions and SC the set of sample suffixes.
+Example. B1 = {1, 4, 7, 10}, B2 = {2, 5, 8, 11}, i.e., C = {1, 4, 7, 10, 2, 5, 8, 11}.
+Step 1: Sort sample suffixes. For k = 1, 2, construct the strings
+Rk = [tktk+1tk+2][tk+3tk+4tk+5] . . . [tmax Bk
+tmax Bk+1tmax Bk+2]
+whose characters are triples [titi+1ti+2]. Note that the last character of Rk is always
+unique because tmax Bk+2 = 0. Let R = R1  R2 be the concatenation of R1 and
+R2. Then the (nonempty) suffixes of R correspond to the set SC of sample suffixes:
+[titi+1ti+2][ti+3ti+4ti+5] . . . corresponds to Si
+. The correspondence is order preserving,
+i.e., by sorting the suffixes of R we get the order of the sample suffixes SC.
+Example. R = [abb][ada][bba][do0][bba][dab][bad][o00].
+To sort the suffixes of R, first radix sort the characters of R and rename them
+with their ranks to obtain the string R0
+. If all characters are different, the order
+of characters gives directly the order of suffixes. Otherwise, sort the suffixes of R0
+using Algorithm DC3.
+Example. R0 = (1, 2, 4, 6, 4, 5, 3, 7) and SAR0 = (8, 0, 1, 6, 4, 2, 5, 3, 7).
+Once the sample suffixes are sorted, assign a rank to each suffix. For i ∈ C,
+let rank(Si) denote the rank of Si
+in the sample set SC. Additionally, define
+rank(Sn+1) = rank(Sn+2) = 0. For i ∈ B0, rank(Si) is undefined.
+Example.
+i 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+rank(Si) ⊥ 1 4 ⊥ 2 6 ⊥ 5 3 ⊥ 7 8 ⊥ 0 0
+Step 2: Sort nonsample suffixes. Represent each nonsample suffix Si ∈ SB0
+with the pair (ti
+, rank(Si+1)). Note that rank(Si+1) is always defined for i ∈ B0.
+Clearly we have, for all i, j ∈ B0,
+Si ≤ Sj ⇐⇒ (ti
+, rank(Si+1)) ≤ (tj
+, rank(Sj+1)).
+The pairs (ti
+, rank(Si+1)) are then radix sorted.
+Example. S12 &lt; S6 &lt; S9 &lt; S3 &lt; S0 because (0, 0) &lt; (a, 5) &lt; (a, 7) &lt; (b, 2) &lt; (y, 1).
+6
+Step 3: Merge. The two sorted sets of suffixes are merged using a standard
+comparison-based merging. To compare suffix Si ∈ SC with Sj ∈ SB0
+, we distinguish
+two cases:
+i ∈ B1 : Si ≤ Sj ⇐⇒ (ti
+, rank(Si+1)) ≤ (tj
+, rank(Sj+1))
+i ∈ B2 : Si ≤ Sj ⇐⇒ (ti
+,ti+1, rank(Si+2)) ≤ (tj
+,tj+1, rank(Sj+2))
+Note that the ranks are defined in all cases.
+Example. S1 &lt; S6 because (a, 4) &lt; (a, 5) and S3 &lt; S8 because (b, a, 6) &lt; (b, a, 7).
+The time complexity is established by the following theorem.
+Theorem 1. The time complexity of Algorithm DC3 is O(n).
+Proof. Excluding the recursive call, everything can clearly be done in linear time.
+The recursion is on a string of length d2n/3e. Thus the time is given by the recurrence T(n) = T(2n/3) + O(n), whose solution is T(n) = O(n).
+4 Difference cover sample
+The sample of suffixes in DC3 is a special case of a difference cover sample. In this
+section, we describe what difference cover samples are, and in the next section we
+give a general algorithm based on difference cover samples.
+The sample used by the algorithms has to satisfy two sample conditions:</li>
+<li>The sample itself can be sorted efficiently. Only certain special cases are known
+to satisfy this condition (see [37, 3, 9, 41] for examples). For example, a random
+sample would not work for this reason. Difference cover samples can be sorted
+efficiently because they are periodic (with a small period). Steps 0 and 1 of
+the general algorithm could be modified for sorting any periodic sample of size
+m with period length v in O(vm) time.</li>
+<li>The sorted sample helps in sorting the set of all suffixes. The set of difference
+cover sample positions has the property that for any i, j ∈ [0, n − v + 1] there
+is a small <code>such that both i +</code> and j + <code> are sample positions. See Steps 2–4 in Section 5 for how this property is utilized in the algorithm. The difference cover sample is based on difference covers [39, 10]. Definition 1. A set D ⊆ [0, v) is a difference cover modulo v if {(i − j) mod v | i, j ∈ D} = [0, v) . 7 Definition 2. A v-periodic sample C of [0, n] with the period D, i.e., C = {i ∈ [0, n] | i mod v ∈ D} , is a difference cover sample if D is a difference cover modulo v. By being periodic, a difference cover sample satisfies the first of the sample conditions. That it satisfies the second condition is shown by the following lemma. Lemma 1. If D is a difference cover modulo v, and i and j are integers, there exists</code> ∈ [0, v) such that (i + <code>) mod v and (j + </code>) mod v are in D.
+Proof. By the definition of difference cover, there exists i
+0
+, j
+0 ∈ D such that i
+0 −j
+0 ≡
+i − j (mod v). Let <code>= (i 0 − i) mod v. Then i +</code> ≡ i
+0 ∈ D (mod v)
+j + <code>≡ i 0 − (i − j) ≡ j 0 ∈ D (mod v) . Note that by using a lookup table of size v that maps (i − j) mod v into i 0 , the value</code> can be computed in constant time.
+The size of the difference cover is a key parameter for the space-efficient algorithm
+in Sections 6. Clearly,
+√
+v is a lower bound. The best general upper bound that we
+are aware of is achieved by a simple algorithm due to Colbourn and Ling [10]:
+Lemma 2 ([10]). For any v, a difference cover modulo v of size at most √
+1.5v + 6
+can be computed in O(
+√
+v) time.
+The sizes of the smallest known difference covers for several period lengths are
+shown in Table 2.
+Table 2: The size of the smallest known difference cover D modulo v for several
+period lengths v. The difference covers were obtained from [44] (v ≤ 64) and [6]
+(v = 128, 256), or computed using the algorithm of Colbourn and Ling [10] (v ≥
+512). For v ≤ 128, the sizes are known to be optimal
+v 3 7 13 21 31 32 64 128 256 512 1024 2048
+|D| 2 3 4 5 6 7 9 13 20 28 40 58
+5 General algorithm
+The algorithm DC3 sorts suffixes with starting positions in a difference cover sample
+modulo 3 and then uses these to sort all suffixes. In this section, we present a
+generalized algorithm DC that can use any difference cover D modulo v.
+8
+Step 0: Construct a sample. For k ∈ [0, v), define
+Bk = {i ∈ [0, n] | i mod v = k}.
+The set of sample positions is now C =
+S
+k∈D Bk. Let D¯ = [0, v) \ D and C¯ =
+[0, n] \ C.
+Step 1: Sort sample suffixes. For k ∈ D, construct the strings
+Rk = [tktk+1 . . .tk+v−1][tk+vtk+v+1 . . .tk+2v−1] . . . [tmax Bk
+. . .tmax Bk+v−1].
+Let R =
+J
+k∈D Rk, where J denotes a concatenation. The (nonempty) suffixes
+of R correspond to the sample suffixes, and they are sorted recursively (using any
+period length from 3 to (1 − )v
+2/|D| to ensure the convergence of the recursion).
+Let rank(Si) be defined as in DC3 for i ∈ C, and additionally define rank(Sn+1) =
+rank(Sn+2) = · · · = rank(Sn+v−1) = 0. Again, rank(Si) is undefined for i ∈ C¯.
+Step 2: Sort nonsample suffixes. Sort each SBk
+, k ∈ D¯, separately. Let k ∈ D¯
+and let <code>∈ [0, v) be such that (k +</code>) mod v ∈ D. To sort SBk
+, represent each
+suffix Si ∈ SBk with the tuples (ti
+,ti+1, . . . ,ti+<code>−1, rank(Si+</code>)). Note that the rank
+is always defined. The tuples are then radix sorted.
+The most straightforward generalization of DC3 would now merge the sets SBk
+,
+k ∈ D¯. However, this would be a Θ(v)-way merging with O(v)-time comparisons
+giving O(nv log v) time complexity. Therefore, we take a slightly different approach.
+Step 3: Sort by first v characters. Separate the sample suffixes SC into sets
+SBk
+, k ∈ D, keeping each set ordered. Then we have all the sets SBk
+, k ∈ [0, v),
+as sorted sequences. Concatenate these sequences and sort the result stably by the
+first v characters.
+For α ∈ [0, n]
+v
+, let S
+α be the set of suffixes starting with α, and let S
+α
+Bk =
+S
+α ∩ SBk
+. The algorithm has now separated the suffixes into the sets S
+α
+Bk
+, each of
+which is correctly sorted. The sets are also grouped by α and the groups are sorted.
+For v = 3, the situation could look like this:
+S
+aaa
+B0
+S
+aaa
+B1
+S
+aaa
+B2
+S
+aab
+B0
+S
+aab
+B1
+S
+aab
+B2
+S
+aac
+B0
+· · ·
+Step 4: Merge. For each α ∈ [0, n]
+v
+, merge the sets S
+α
+Bk
+, k ∈ [0, v), into the set
+S
+α
+. This completes the sorting.
+The merging is done by a comparison-based v-way merging. For i, j ∈ [0, n],
+let <code>∈ [0, v) be such that (i +</code>) mod v and (j + <code>) mod v are both in D. Suffixes Si and Sj are compared by comparing rank(Si+</code>) and rank(Sj+<code>). This gives the correct order because Si and Sj belong to the same set S α and thus titi+1 . . .ti+</code>−1 =
+tj tj+1 . . .tj+<code>−1. Theorem 2. The time complexity of Algorithm DC is O(vn). 9 6 Lightweight algorithm We now explain how to implement algorithm DC using only O(n/√ v) space in addition to the input and the output. We will however reuse the space for the output array a[0, n] as intermediate storage. Step 0:. The sample can be represented using their O(n/√ v) starting positions. Step 1:. To sort the sample suffixes, we first (non-inplace) radix sort the v-tuples that start at sample positions. This is easy using two arrays of size O(n/√ v) for storing starting positions of samples and n + 1 counters (one for each character) stored in the output array a[0, n]. This is analogous to the arrays R, SA12 and c used in Appendix A. Renaming the tuples with ranks only needs the O(n/√ v) space for the recursive subproblem. The same space bound applies to the suffix array of the sample and the space needed within the recursive call. Step 2:. Sorting nonsample suffixes for a particular class SBk , k ∈ D¯ amounts to radix sorting (n + 1)/v many tuples of up to v integers in the range [0, n]. Similar to Step 1, we need only space O(n/v) for describing these tuples. However, we now arrange the sorted tuples in a[k(n + 1)/v,(k + 1)(n + 1)/v) so that the output array is not available for counters as in Step 1. We solve this problem by viewing each character as two subcharacters in the range [0, √ n + 1). Step 3: Sort by first v characters. Scan the suffix array of the sample and store the sample suffixes SBk , k ∈ C in a[k(n+1)/v,(k+1)(n+1)/v) maintaining the order given by the sample within each class SBk . Together with the computation in Step 2, the output array now stores the desired concatenation of all sorted sets SBk . We now sort all suffixes stably by their first v characters. Using a counter array of size O( √ n) we can do that in 2v passes, total time O(vn), and additional space O(n 3/4 ) by applying the almost inplace distribution sorting algorithm from Theorem 5 in the appendix with k = √ n + 1. Note that for v = O( √ n), n 3/4 = O(n/√ v). Step 4: Merge. Suppose S α is stored in a[b, b 0 ). This array consists of v consecutive (possibly empty) subarrays that represent S α Bk , k ∈ [0, v) respectively. We can merge them with O( p |Sα|v) additional space using the almost inplace merging routine (see Theorem 6 in the appendix). Note that for v = O( √ p n), |Sα|v = O(n/√ v). Theorem 3. For v = O( √ n), algorithm DC can be implemented to run in time O(vn) using additional space O(n/√ v). The upper bound for v can be increased to O(n 2/3 ) by using the comparison based algorithm from [6] when v = ω( √ n). 10 7 Advanced models In this section, we adapt the DC3 algorithm for several advanced models of computation. We first explain the main ideas and then bundle the results in Theorem 4 below. The adaptation to memory hierarchies is easy since all operations can be described in terms of scanning, sorting, and permuting sequences of tuples using standard techniques. Since scanning is trivial and since permuting is equivalent to sorting, all we really need is a good external sorting algorithm. The proof therefore concentrates on bounding the internal work associated with integer sorting. Parallelization is slightly more complicated since the scanning needed to find the ranks of elements looks like a sequential process on the first glance. However, the technique to overcome this is also standard: Consider a sorted array a[0, n]. Define c[0] = 1 and c[i] = 1 if c[i − 1] 6= c[i] and c[i] = 0 otherwise for i ∈ [1, n]. Now the prefix sums P i∈[0,j] c[i] give the rank of a[j]. Computing prefix sums in parallel is again a well studied problem. Theorem 4. The DC3 algorithm can be implemented to achieve the following performance guarantees on advanced models of computation: model of computation complexity alphabet External Memory [59] D disks, block size B, fast memory of size M O( n DB log M B n B ) I/Os O(n log M B n B ) internal work integer Cache Oblivious [22] O( n B log M B n B ) cache faults general BSP [58] P processors h-relation in time L + gh O( n log n P + L log2 P + gn log n P log(n/P) ) time general P = O(n 1− ) processors O(n/P + L log2 P + gn/P) time integer EREW-PRAM [33] O(log2 n) time and O(n log n) work general priority-CRCW-PRAM [33] O(log2 n) time and O(n) work (randomized) constant Proof. External memory: Step 1 of the DC3 algorithm begins by scanning the input and producing tuples ([t3i+kt3i+k+1t3i+k+2], 3i + k) for k ∈ {1, 2} and 3i + k ∈ [0, n]. These tuples are then sorted by lexicographic order of the character triples. The results are scanned producing rank position pairs (r3i+k, 3i + k). Constructing a recursive problem instance then amounts to sorting using the lexicographic order of (k, i) for comparing positions of the form 3i + k. Similarly, assigning ranks to a sample suffix j at position i in the suffix array of the sample amounts to sorting pairs of the form (i, j). 11 Step 2 sorts triples of the form (ti , rank(Si+1), i). Step 3 represents S3i as (t3i ,t3i+1, rank(S3i+1), rank(S3i+2), 3i), S3i+1 as (t3i+1, rank(S3i+2), 3i+1), and S3i+2 as (t3i+2,t3i+3, rank(S3i+4)), 3i + 2). This way all the information needed for comparisons is available. These representations are produced using additional sorting and scanning passes. A more detailed description and analysis of external DC3 is given in [14]. It turns out that the total I/O volume is equivalent to the amount I/O needed for sorting 30n words of memory plus the I/O needed for scanning 6n words. All in all, the complexity of external suffix array construction is governed by the effort for sorting objects consisting of a constant number of machine words. The keys are integers in the range [0, n], or pairs or triples of such integers. I/O optimal deterministic1 parallel disk sorting algorithms are well known [53, 52]. We have to make a few remarks regarding internal work however. To achieve optimal internal work for all values of n, M, and B, we can use radix sort where the most significant digit has blog Mc − 1 bits and the remaining digits have blog M/Bc bits. Sorting then starts with O(logM/B n/M) data distribution phases that need linear work each and can be implemented using O(n/DB) I/Os using the same I/O strategy as in [52]. It remains to stably sort the elements by their blog Mc−1 most significant bits. This is also done using multiple phases of distribution sorting similar to [52] but we can now afford to count how often each key appears and use this information to produce splitters that perfectly balance the bucket sizes (we may have large buckets with identical keys but this is no problem because no further sorting is required for them). Mapping keys to buckets can use lookup tables of size O(M). Cache oblivious: These algorithms are similar to external algorithms with a single disk but they are not allowed to make explicit use of the block size B or the internal memory size M. This is a serious restriction here since no cache oblivious integer sorting with O( n B logM/B n B ) cache faults and o(n log n) work is known. Hence, we can as well go to the comparison based alphabet model. The result is then an immediate corollary of the optimal comparison based sorting algorithm [22]. EREW PRAM: We can use Cole’s merge sort [11] for parallel sorting and merging. For an input of size m and P processors, Cole’s algorithm takes time O((m log m)/P +log P). The i-th level or recursion has an input of size n(2/3)i and thus takes time (2/3)iO((n log n)/P +log P). After Θ(log P) levels of recursion, the problem size has reduced so far that the remaining subproblem can be solved in time O((n/P log(n/P)) on a single processor. We get an overall execution time of O((n log n)/P + log2 P). BSP: For the case of many processors, we proceed as for the EREW-PRAM algorithm using the optimal comparison based sorting algorithm [25] that takes time O((n log n)/P + (gn/P + L) log n log(n/P) ). 1Simpler randomized algorithms with favorable constant factors are also available [15]. 12 For the case of few processors, we can use a linear work sorting algorithm based on radix sort [8] and a linear work merging algorithm [23]. The integer sorting algorithm remains applicable at least during the first Θ(log log n) levels of recursion of the DC3 algorithm. Then we can afford to switch to a comparison based algorithm without increasing the overall amount of internal work. CRCW PRAM: We employ the stable integer sorting algorithm [55] that works in O(log n) time using linear work for keys with O(log log n) bits. This algorithm can be used for the first Θ(log log log n) iterations for constant input alphabets. Then we can afford to switch to the algorithm [29] that works for keys with O(log n) bits at the price of being inefficient by a factor O(log log n). Comparison based merging can be implemented with linear work and O(log n) time using [30]. The resulting algorithms are simple except that they may use complicated subroutines for sorting to obtain theoretically optimal results. There are usually much simpler implementations of sorting that work well in practice although they may sacrifice determinism or optimality for certain combinations of parameters. 8 Conclusion The main result of this paper is DC3, a simple, direct, linear time algorithm for suffix sorting with integer alphabets. The algorithm is easy to implement and it can be used as an example for advanced string algorithms even in undergraduate level algorithms courses. Its simplicity also makes it an ideal candidate for implementation on advanced models of computation. For example in [14] we describe an external memory implementation that clearly outperforms the best previously known implementations and several other new algorithms. The concept of difference covers makes it possible to generalize the DC3 algorithm. This generalized DC algorithm allows space efficient implementation. An obvious remaining question is how to adapt DC to advanced models of computation in a space efficient way. At least for the external memory model this is possible but we only know an approach that needs I/O volume Ω (nv2.5 ). The space efficient algorithm can also be adapted to sort an arbitrary set of suffixes by simply excluding the nonsample suffixes that we do not want to sort in the Steps 2–4. Sorting a set of m suffixes can be implemented to run in O(vm+n √ v) time using O(m + n/√ v) additional space. Previously, the only alternatives were string sorting in O(mn) worst case time or sorting all suffixes using O(n) additional space. The space efficient Burrows–Wheeler transform in [35] relies on space efficient sorting of subsets of suffixes. In many applications [1, 2, 34, 38, 45], the suffix array needs to be augmented with the longest common prefix array lcp that stores the length of the longest common prefix of SAi and SAi+1 in lcp[i]. Once the lcp information is known it also 13 easy to infer advanced search data structures like suffix trees and string B-trees [20]. There are simple linear time algorithms for computing the lcp array from the suffix array [38, 46], but they do not appear to be suitable for parallel or external computation. Farach’s algorithm [16] and the other half-recursive algorithms compute the lcp array at each level of the recursion since it is needed for merging. With a similar technique the DC algorithm can be modified to compute the lcp array as a byproduct: If k = SA[i] and j = SA[i + 1] then find an </code> such that k + <code>and j +</code> are both in the sample. If T[k, k + <code>) 6= T[j, j + </code>) then lcp[i] can be computed
+locally. Otherwise, lcp[i] = <code> + lcp(Sk+</code>
+, Sj+<code>). The lcp of Sk+</code> and Sj+` can be
+approximated within an additive term v from the lcp information of the recursive
+string R using range minima queries. All these operations can be implemented in
+parallel or for memory hierarchies using standard techniques.
+References
+[1] M. I. Abouelhoda, S. Kurtz, and E. Ohlebusch. The enhanced suffix array and
+its applications to genome analysis. In Proc. 2nd Workshop on Algorithms in
+Bioinformatics, volume 2452 of LNCS, pages 449–463. Springer, 2002.
+[2] M. I. Abouelhoda, E. Ohlebusch, and S. Kurtz. Optimal exact string matching based on suffix arrays. In Proc. 9th Symposium on String Processing and
+Information Retrieval, volume 2476 of LNCS, pages 31–43. Springer, 2002.
+[3] A. Andersson, N. J. Larsson, and K. Swanson. Suffix trees on words. Algorithmica, 23(3):246–260, 1999.
+[4] J. L. Bentley and R. Sedgewick. Fast algorithms for sorting and searching
+strings. In Proc. 8th Annual Symposium on Discrete Algorithms, pages 360–</li>
+<li>ACM, 1997.
+[5] A. Bertoni, C. Mereghetti, and B. Palano. Golomb rulers and difference sets
+for succinct quantum automata. Int. J. Found. Comput. Sci., 14(5):871–888,
+2003.
+[6] S. Burkhardt and J. K¨arkk¨ainen. Fast lightweight suffix array construction and
+checking. In Proc. 14th Annual Symposium on Combinatorial Pattern Matching,
+volume 2676 of LNCS, pages 55–69. Springer, 2003.
+[7] M. Burrows and D. J. Wheeler. A block-sorting lossless data compression
+algorithm. Technical Report 124, SRC (digital, Palo Alto), May 1994.
+[8] A. Chan and F. Dehne. A note on coarse grained parallel integer sorting.
+Parallel Processing Letters, 9(4):533–538, 1999.
+14
+[9] R. Clifford and M. Sergot. Distributed and paged suffix trees for large genetic databases. In Proc. 14th Annual Symposium on Combinatorial Pattern
+Matching, volume 2676 of LNCS, pages 70–82. Springer, 2003.
+[10] C. J. Colbourn and A. C. H. Ling. Quorums from difference covers. Inf. Process.
+Lett., 75(1–2):9–12, July 2000.
+[11] R. Cole. Parallel merge sort. SIAM J. Comput., 17(4):770–785, 1988.
+[12] A. Crauser and P. Ferragina. Theoretical and experimental study on the construction of suffix arrays in external memory. Algorithmica, 32(1):1–35, 2002.
+[13] M. Crochemore and W. Rytter. Jewels of Stringology. World Scientific, 2002.
+[14] R. Dementiev, J. Mehnert, and J. K¨arkk¨ainen. Better external memory suffix
+array construction. In Workshop on Algorithm Engineering &amp; Experiments,
+Vancouver, 2005.
+[15] R. Dementiev and P. Sanders. Asynchronous parallel disk sorting. In Proc.
+15th Annual Symposium on Parallelism in Algorithms and Architectures, pages
+138–148. ACM, 2003.
+[16] M. Farach. Optimal suffix tree construction with large alphabets. In Proc.
+38th Annual Symposium on Foundations of Computer Science, pages 137–143.
+IEEE, 1997.
+[17] M. Farach, P. Ferragina, and S. Muthukrishnan. Overcoming the memory
+bottleneck in suffix tree construction. In Proc. 39th Annual Symposium on
+Foundations of Computer Science, pages 174–183. IEEE, 1998.
+[18] M. Farach and S. Muthukrishnan. Optimal logarithmic time randomized suffix tree construction. In Proc. 23th International Conference on Automata,
+Languages and Programming, pages 550–561. IEEE, 1996.
+[19] M. Farach-Colton, P. Ferragina, and S. Muthukrishnan. On the sortingcomplexity of suffix tree construction. J. ACM, 47(6):987–1011, 2000.
+[20] P. Ferragina and R. Grossi. The string B-tree: A new data structure for string
+search in external memory and its applications. J. ACM, 46(2):236–280, 1999.
+[21] P. Ferragina and G. Manzini. Opportunistic data structures with applications.
+In Proc. 41st Annual Symposium on Foundations of Computer Science, pages
+390–398. IEEE, 2000.
+[22] M. Frigo, C. E. Leiserson, H. Prokop, and S. Ramachandran. Cache-oblivious
+algorithms. In Proc. 40th Annual Symposium on Foundations of Computer
+Science, pages 285–298. IEEE, 1999.
+15
+[23] A. V. Gerbessiotis and C. J. Siniolakis. Merging on the BSP model. Parallel
+Computing, 27:809–822, 2001.
+[24] G. Gonnet, R. Baeza-Yates, and T. Snider. New indices for text: PAT trees
+and PAT arrays. In W. B. Frakes and R. Baeza-Yates, editors, Information
+Retrieval: Data Structures &amp; Algorithms. Prentice-Hall, 1992.
+[25] M. T. Goodrich. Communication-efficient parallel sorting. SIAM J. Comput.,
+29(2):416–432, 1999.
+[26] R. Grossi and G. F. Italiano. Suffix trees and their applications in string algorithms. Rapporto di Ricerca CS-96-14, Universit`a “Ca’ Foscari” di Venezia,
+Italy, 1996.
+[27] R. Grossi and J. S. Vitter. Compressed suffix arrays and suffix trees with
+applications to text indexing and string matching (extended abstract). In Proc.
+32nd Annual Symposium on Theory of Computing, pages 397–406. ACM, 2000.
+[28] D. Gusfield. Algorithms on Strings, Trees, and Sequences: Computer Science
+and Computational Biology. Cambridge University Press, 1997.
+[29] T. Hagerup and R. Raman. Waste makes haste: Tight bounds for loose parallel
+sorting. In Proc. 33rd Annual Symposium on Foundations of Computer Science,
+pages 628–637. IEEE, 1992.
+[30] T. Hagerup and C. Rub. ¨ Optimal merging and sorting on the EREW-PRAM.
+Information Processing Letters, 33:181–185, 1989.
+[31] W.-K. Hon, T.-W. Lam, K. Sadakane, and W.-K. Sung. Constructing compressed suffix arrays with large alphabets. In Proc. 14th International Symposium on Algorithms and Computation, volume 2906 of LNCS, pages 240–249.
+Springer, 2003.
+[32] W.-K. Hon, K. Sadakane, and W.-K. Sung. Breaking a time-and-space barrier in
+constructing full-text indices. In Proc. 44th Annual Symposium on Foundations
+of Computer Science, pages 251–260. IEEE, 2003.
+[33] J. J´aj´a. An Introduction to Parallel Algorithms. Addison Wesley, 1992.
+[34] J. K¨arkk¨ainen. Suffix cactus: A cross between suffix tree and suffix array. In
+Z. Galil and E. Ukkonen, editors, Proc. 6th Annual Symposium on Combinatorial Pattern Matching, volume 937 of LNCS, pages 191–204. Springer, 1995.
+[35] J. K¨arkk¨ainen. Fast BWT in small space by blockwise suffix sorting. In DIMACS Working Group on The Burrows–Wheeler Transform: Ten Years Later,
+Aug. 2004. To appear.
+16
+[36] J. K¨arkk¨ainen and P. Sanders. Simple linear work suffix array construction.
+In Proc. 30th International Conference on Automata, Languages and Programming, volume 2719 of LNCS, pages 943–955. Springer, 2003.
+[37] J. K¨arkk¨ainen and E. Ukkonen. Sparse suffix trees. In Proc. 2nd Annual
+International Conference on Computing and Combinatorics, volume 1090 of
+LNCS, pages 219–230. Springer, 1996.
+[38] T. Kasai, G. Lee, H. Arimura, S. Arikawa, and K. Park. Linear-time longestcommon-prefix computation in suffix arrays and its applications. In Proc. 12th
+Annual Symposium on Combinatorial Pattern Matching, volume 2089 of LNCS,
+pages 181–192. Springer, 2001.
+[39] J. Kilian, S. Kipnis, and C. E. Leiserson. The organization of permutation
+architectures with bused interconnections. IEEE Transactions on Computers,
+39(11):1346–1358, Nov. 1990.
+[40] D. K. Kim, J. S. Sim, H. Park, and K. Park. Linear-time construction of suffix
+arrays. In Proc. 14th Annual Symposium on Combinatorial Pattern Matching,
+volume 2676 of LNCS, pages 186–199. Springer, June 2003.
+[41] P. Ko and S. Aluru. Space efficient linear time construction of suffix arrays.
+In Proc. 14th Annual Symposium on Combinatorial Pattern Matching, volume
+2676 of LNCS, pages 200–210. Springer, June 2003.
+[42] T.-W. Lam, K. Sadakane, W.-K. Sung, and S.-M. Yiu. A space and time efficient algorithm for constructing compressed suffix arrays. In Proc. 8th Annual
+International Conference on Computing and Combinatorics, volume 2387 of
+LNCS, pages 401–410. Springer, 2002.
+[43] N. J. Larsson and K. Sadakane. Faster suffix sorting. Technical report LU-CSTR:99-214, Dept. of Computer Science, Lund University, Sweden, 1999.
+[44] W.-S. Luk and T.-T. Wong. Two new quorum based algorithms for distributed
+mutual exclusion. In Proc. 17th International Conference on Distributed Computing Systems, pages 100–106. IEEE, 1997.
+[45] U. Manber and G. Myers. Suffix arrays: A new method for on-line string
+searches. SIAM J. Comput., 22(5):935–948, Oct. 1993.
+[46] G. Manzini. Two space saving tricks for linear time LCP array computation. In
+Proc. 9th Scandinavian Workshop on Algorithm Theory, volume 3111 of LNCS,
+pages 372–383. Springer, 2004.
+17
+[47] G. Manzini and P. Ferragina. Engineering a lightweight suffix array construction
+algorithm. In Proc. 10th Annual European Symposium on Algorithms, volume
+2461 of LNCS, pages 698–710. Springer, 2002.
+[48] E. M. McCreight. A space-economic suffix tree construction algorithm. J. ACM,
+23(2):262–272, 1976.
+[49] P. M. McIlroy, K. Bostic, and M. D. McIlroy. Engineering radix sort. Computing
+systems, 6(1):5–27, 1993.
+[50] G. Navarro and R. Baeza-Yates. A hybrid indexing method for approximate
+string matching. Journal of Discrete Algorithms (JDA), 1(1):205–239, 2000.
+Special issue on Matching Patterns.
+[51] K. S. Neubert. The flashsort1 algorithm. Dr. Dobb’s Journal, pages 123–125,
+February 1998.
+[52] M. H. Nodine and J. S. Vitter. Deterministic distribution sort in shared and distributed memory multiprocessors. In Proc. 5th Annual Symposium on Parallel
+Algorithms and Architectures, pages 120–129. ACM, 1993.
+[53] M. H. Nodine and J. S. Vitter. Greed sort: An optimal sorting algorithm for
+multiple disks. J. ACM, 42(4):919–933, 1995.
+[54] S. Puglisi, W. Smyth, and A. Turpin. The performance of linear time suffix
+sorting algorithms. In Proc. Data Compression Conference, March 2005. to
+appear.
+[55] S. Rajasekaran and J. H. Reif. Optimal and sublogarithmic time randomized
+parallel sorting algorithms. SIAM J. Comput., 18(3):594–607, 1989.
+[56] B. Smyth. Computing Patterns in Strings. Pearson Addison–Wesley, 2003.
+[57] E. Ukkonen. On-line construction of suffix trees. Algorithmica, 14(3):249–260,
+1995.
+[58] L. G. Valiant. A bridging model for parallel computation. Commun. ACM,
+22(8):103–111, Aug. 1990.
+[59] J. S. Vitter and E. A. M. Shriver. Algorithms for parallel memory, I: Two level
+memories. Algorithmica, 12(2/3):110–147, 1994.
+[60] P. Weiner. Linear pattern matching algorithm. In Proc. 14th Symposium on
+Switching and Automata Theory, pages 1–11. IEEE, 1973.
+[61] I. H. Witten, A. Moffat, and T. C. Bell. Managing Gigabytes: Compressing
+and Indexing Documents and Images. Morgan Kaufmann, 1999.
+18
+A Source code
+The following C++ file contains a complete linear time implementation of suffix
+array construction. The main purpose of this code is to “prove” that the algorithm
+is indeed simple and that our natural language description is not hiding nonobvious
+complications. It should be noted that there are now faster (more complicated)
+implementations of our algorithm [54]. A driver program can be found at http:
+//www.mpi-sb.mpg.de/~sanders/programs/suffix/.
+inline bool leq(int a1, int a2, int b1, int b2) // lexicographic order
+{ return(a1 &lt; b1 || a1 == b1 &amp;&amp; a2 &lt;= b2); } // for pairs
+inline bool leq(int a1, int a2, int a3, int b1, int b2, int b3)
+{ return(a1 &lt; b1 || a1 == b1 &amp;&amp; leq(a2,a3, b2,b3)); } // and triples
+// stably sort a[0..n-1] to b[0..n-1] with keys in 0..K from r
+static void radixPass(int* a, int* b, int* r, int n, int K)
+{ // count occurrences
+int* c = new int[K + 1]; // counter array
+for (int i = 0; i &lt;= K; i++) c[i] = 0; // reset counters
+for (int i = 0; i &lt; n; i++) c[r[a[i]]]++; // count occurrences
+for (int i = 0, sum = 0; i &lt;= K; i++) // exclusive prefix sums
+{ int t = c[i]; c[i] = sum; sum += t; }
+for (int i = 0; i &lt; n; i++) b[c[r[a[i]]]++] = a[i]; // sort
+delete [] c;
+}
+// find the suffix array SA of T[0..n-1] in {1..K}^n
+// require T[n]=T[n+1]=T[n+2]=0, n&gt;=2
+void suffixArray(int* T, int* SA, int n, int K) {
+int n0=(n+2)/3, n1=(n+1)/3, n2=n/3, n02=n0+n2;
+int* R = new int[n02 + 3]; R[n02]= R[n02+1]= R[n02+2]=0;
+int* SA12 = new int[n02 + 3]; SA12[n02]=SA12[n02+1]=SA12[n02+2]=0;
+int* R0 = new int[n0];
+int* SA0 = new int[n0];
+//******* Step 0: Construct sample ********
+// generate positions of mod 1 and mod 2 suffixes
+// the &ldquo;+(n0-n1)&rdquo; adds a dummy mod 1 suffix if n%3 == 1
+for (int i=0, j=0; i &lt; n+(n0-n1); i++) if (i%3 != 0) R[j++] = i;
+//******* Step 1: Sort sample suffixes ********
+// lsb radix sort the mod 1 and mod 2 triples
+radixPass(R , SA12, T+2, n02, K);
+radixPass(SA12, R , T+1, n02, K);
+radixPass(R , SA12, T , n02, K);
+19
+// find lexicographic names of triples and
+// write them to correct places in R
+int name = 0, c0 = -1, c1 = -1, c2 = -1;
+for (int i = 0; i &lt; n02; i++) {
+if (T[SA12[i]] != c0 || T[SA12[i]+1] != c1 || T[SA12[i]+2] != c2)
+{ name++; c0 = T[SA12[i]]; c1 = T[SA12[i]+1]; c2 = T[SA12[i]+2]; }
+if (SA12[i] % 3 == 1) { R[SA12[i]/3] = name; } // write to R1
+else { R[SA12[i]/3 + n0] = name; } // write to R2
+}
+// recurse if names are not yet unique
+if (name &lt; n02) {
+suffixArray(R, SA12, n02, name);
+// store unique names in R using the suffix array
+for (int i = 0; i &lt; n02; i++) R[SA12[i]] = i + 1;
+} else // generate the suffix array of R directly
+for (int i = 0; i &lt; n02; i++) SA12[R[i] - 1] = i;
+//******* Step 2: Sort nonsample suffixes ********
+// stably sort the mod 0 suffixes from SA12 by their first character
+for (int i=0, j=0; i &lt; n02; i++) if (SA12[i] &lt; n0) R0[j++] = 3*SA12[i];
+radixPass(R0, SA0, T, n0, K);
+//******* Step 3: Merge ********
+// merge sorted SA0 suffixes and sorted SA12 suffixes
+for (int p=0, t=n0-n1, k=0; k &lt; n; k++) {
+#define GetI() (SA12[t] &lt; n0 ? SA12[t] * 3 + 1 : (SA12[t] - n0) * 3 + 2)
+int i = GetI(); // pos of current offset 12 suffix
+int j = SA0[p]; // pos of current offset 0 suffix
+if (SA12[t] &lt; n0 ? // different compares for mod 1 and mod 2 suffixes
+leq(T[i], R[SA12[t] + n0], T[j], R[j/3]) :
+leq(T[i],T[i+1],R[SA12[t]-n0+1], T[j],T[j+1],R[j/3+n0]))
+{ // suffix from SA12 is smaller
+SA[k] = i; t++;
+if (t == n02) // done &mdash; only SA0 suffixes left
+for (k++; p &lt; n0; p++, k++) SA[k] = SA0[p];
+} else { // suffix from SA0 is smaller
+SA[k] = j; p++;
+if (p == n0) // done &mdash; only SA12 suffixes left
+for (k++; t &lt; n02; t++, k++) SA[k] = GetI();
+}
+}
+delete [] R; delete [] SA12; delete [] SA0; delete [] R0;
+}
+20
+B Almost inplace stable distribution sorting and
+multiway merging
+For the lightweight implementation of the DC-algorithm, we need subroutines that
+are combinations of well known ideas. We outline them here to keep the paper
+self-contained.
+The first idea is used for inplace yet instable distribution sorting (e.g., [49, 51]):
+The algorithm works similar to the radixPass routine in Appendix A yet it reuses
+the input array to allocate the output buckets. When character a[i] is moved to
+its destination bucket at array entry j, a[j] is taken as the next element to be
+distributed. This process is continued until an element is encountered that has
+already been moved. This order of moving elements decomposes the permutation
+implied by sorting into its constituent cycles. Therefore, the termination condition
+is easy to check: A cycle ends when we get back to the element that started the
+cycle. Unfortunately, this order of moving elements can destroy a preexisting order
+of keys with identical value and hence is instable.
+The second idea avoids instability using a reinterpretation of the input as a
+sequence of blocks. For example, (almost) inplace multiway merging of files is a
+standard technique in external memory processing [61, Section 5.3].
+1 2 3 4 5
+6 7 8
+6 2 4 3 7 8 1 5
+b
+1
+b
+0
+b
+2
+b
+1
+b
+2
+b
+0
+a
+a
+a
+a
+Figure 1: Example for the distribution algorithm for k = 3, n = 32, and B = 4. Four
+states are shown: Before distribution, when all but two blocks have been distributed,
+when all blocks are distributed, and the final sorted arrays. The numbers give the
+order of block moves in the final permutation. In this example, only three additional
+blocks are needed for temporary storage.
+The synthesis of these two ideas leads to a “file-like” stable implementation of
+distribution sorting and multiway merging followed by an inplace permutation at
+21
+the block level that converts the file-representation back to an array representation.
+We work out the details in the proofs of the following two theorems.
+Theorem 5. An array a[0, n) containing elements with keys in the range [0, k),
+k = O(n), can be stably sorted in time O(n) using O(
+√
+kn) additional space.
+Proof. Let bj = [a[i] : i ∈ [0, n), key(a[i]) = j] denote the j=th bucket, i.e., the sequence of elements with key j. Sorting a means to permute it in such a way that
+bj = a[
+P
+i∈[0,j)
+|bi
+|,
+P
+i∈[0,j]
+|bi
+|). We begin with a counting phase that computes the
+bucket sizes |bj
+|.
+Then we reinterpret a as a sequence of blocks of size B = Θ(p
+n/k). For the
+time being, buckets will also be represented as sequences of blocks. For each key,
+we create an initially empty bucket that is implemented as an array of d|bj
+|/Be
+pointers to blocks. The first (
+P
+i∈[0,j)
+|bi
+|) mod B elements of the first block of bj are
+left empty in the distribution process. This way, elements are immediately moved
+to the correct position modB. Buckets aquire additional blocks from a free list as
+needed. However, for the last block of a bucket bj
+, j &lt; k − 1, the first block of
+bucket bj+1 is used. This way, only one partially filled block remains at the end:
+The last block of bk−1 is stored in another preallocated block outside of a. The free
+list is initially equipped with 2k + 2 empty blocks. The distribution process scans
+through the input sequence and appends an element with key j to bucket bj
+. When
+the last element from an input block has been consumed, this block is added to the
+free list. Since at any point of time there are at most 2k + 1 partially filled blocks
+(one for the input sequence, one at the start of a bucket, and one at the end of a
+bucket), the free list never runs out of available blocks.
+After the distribution phase, the blocks are permuted in such a way that a
+becomes a sorted array. The blocks can be viewed as the nodes of a directed graph
+where each nonempty block has an edge leading to the block in a where it should
+be stored in the sorted order. The nodes of this graph have maximum in-degree and
+out-degree one and hence the graph is a collection of paths and cycles. Paths end at
+empty blocks in a. This structure can be exploited for the permutation algorithm:
+In the outermost loop, we scan the blocks in a until we encounter a nonempty block
+a[i, i + B) that has not been moved to its destination position j yet. This block is
+moved to a temporary space t. We repeatedly swap t with the block of a where its
+content should be moved until we reach the end of a path or cycle. When all blocks
+from a are moved to their final destination, the additionally allocated blocks can be
+moved to their final position directly. This includes the partially filled last block of
+bk−1.
+The total space overhead is O(kB) = O(
+√
+nk) for the additional blocks, O(dn/Be+
+k) = O(
+√
+nk) for representing buckets, and O(dn/Be + k) = O(
+√
+nk) for pointers
+that tell every block where it wants to go.
+Theorem 6. An array a[0, n) consisting of k ≤ n sorted subarrays can be sorted in
+time O(n log k) using O(
+√
+kn) additional space.
+22
+Proof. The algorithm is similar to the distribution algorithm from Theorem 5 so that
+we only outline the differences. We reinterpret the subarrays as sequences of blocks
+of a with a partially filled block at their start and end. Only blocks that completely
+belong to a subarray are handed to the free list. The smallest unmerged elements
+from each sequence are kept in a priority queue. Merging repeatedly removes the
+smallest element and appends it to the output sequence that is represented as a
+sequence of blocks aquired from the free list. After the merging process, it remains
+to permute blocks to obtain a sorted array. Except for space O(k) for the priority
+queue, the space overhead is the same as for distribution sorting.
+23</li>
+</ol>
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://cs-fil.github.io/2020/12/txt/" title="txt" target="_blank" rel="external">https://cs-fil.github.io/2020/12/txt/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cs-fil" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://cs-fil.github.io/nasi.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cs-fil" target="_blank"><span class="text-dark">湮佚</span><small class="ml-1x">loving Cloud&#34;</small></a></h3>
+        <div>i just want you here with me</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://cs-fil.github.io/2020/12/hash/" title="Hash"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://cs-fil.github.io/2020/12/poj-3974/"
+                    title="POJ 3974 Palindrome"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/cs-fil" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://cs-fil.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2021
+    <div class="publishby">
+        Theme base on hugo.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://cs-fil.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://cs-fil.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/cs-fil.github.io\/',
+            CONTENT_URL: 'https:\/\/cs-fil.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://cs-fil.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>
